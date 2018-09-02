@@ -2,25 +2,36 @@
     Program that checks if name exist in list
 '''
 
-Ordinary_list = ["Lule Herman","Edmond Musiitwa","Eric Ebulu","Douglas Kato",\
-"Kayabula Alex Joseph","Jolly Karungi","Christopher Kaggwa","Katusiime Joel"\
-"Manzede Benard","Orone Faith","Rubarema Sam","kyakulumbye Ahmad","Mutesasira Moses",\
-"Kica Ronald Okello","Michael Robert Wali","Mulondo Moses"]
+# capture List of string 
 
-Vip_list = ["Hakeem Matovu","kasule Joseph","Phiona Mary Kigai","Ivan Kivumbi",\
-"Romin Kayira","Nabulo Vivian","Haruna Kiwooma","Soko Paul","Sekabira Yasin",\
-"Ntale Shadik","Kabareebe Treasure","Maria Nanfuka","Kafuuma Henry","Albert Abaasa"]
+ordinary_list = []
+f = open('ordinary_list.txt','r')
+ordinary = f.readlines()      # Using .readlines()
+f.close()
+for name in ordinary:
+    ordinary_list.append((name.title()).rstrip('\n')) 
+# print(ordinary_list)
 
-# List of string #
+vip_list = []
+f = open('vip_list.txt','r')
+vip = f.readlines()      # Using .readlines()
+f.close()
+for name in vip:
+    vip_list.append((name.title()).rstrip('\n')) 
+# print(vip_list)
+
+User_Name = (input("Please Enter your Name:\n > ")).title()
+# Ask a user to enter one of their names and check through the lists to see
+# if any(User_Name in mystring for mystring in vip_list) == True:
+#     print ("\n".join(names for names in vip_list if User_Name.title() in names))
+
 def registration_checker(User_Name):
-
-    if User_Name in Vip_list:
-        print("Congratulations, {} is found in VIP List ".format(User_Name))
-    elif User_Name in Ordinary_list:
-        print("Congratulations, {} is found in Ordinary List ".format(User_Name))
+    if any(User_Name in mystring for mystring in vip_list) == True:
+        print ("\n".join(names for names in vip_list if User_Name.title() in names) + ", VIP")
+    elif any(User_Name in mystring for mystring in ordinary_list) == True:
+        print ("\n" .join(names for names in ordinary_list if User_Name.title() in names) + ", Ordinary")
     else:
-        print("Sorry, The name {} entered is not registed in any list".format(User_Name))
+        print("Sorry, The name {} entered is not registed in any list!".format(User_Name))
     
 
-
-
+registration_checker(User_Name)
