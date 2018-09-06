@@ -1,2 +1,5 @@
-# Level_Up_35
-Level up project "Andela_35"
+# Events App
+
+*Level up project "Andela_35"*
+
+The App issue tickects to the event
