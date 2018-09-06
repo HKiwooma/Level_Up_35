@@ -19,8 +19,8 @@ class User(Person):
         self.age = age
 
 
-# Using a data structures approach, create a class called `GuestList' that will add, retrieve and handle deleting of users.     
 class GuestList:
+
     def __init__(self):
         self.dict_of_users = {}
 
@@ -42,6 +42,7 @@ class GuestList:
     def user_exist(self,Id):
         return self.dict_of_users.__contains__(Id)
     
+
 class AppUsers:
     def __init__(self, Id, username, email_address):
         self.Id = Id
