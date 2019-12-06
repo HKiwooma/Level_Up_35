@@ -1,14 +1,173 @@
-@media screen and (max-width:720px) {
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #001f3f; 
+    /* background-color: green;    */
+}
+
+#nav {
+    background: #022a3f;
+    color: #ffffff;
+    text-align: center;
+    max-width: auto;
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#nav h1{
+    text-transform: uppercase;
+}
+
+.nav1{
+    /* float: center; */
+    max-width: auto;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+}
+
+#current{
+    background-color: #333333;
+    font-weight: bold;
+    color: #ffffff;
+    /* border-style: outset; */
+} 
+.nav1 a{
+    /* display: block; */
+    padding: 8px;
+    background-color: #9dbfec;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.nav1 ul{
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.nav1 li{
+    /* float: center; */
+    display: inline;
+    /* padding: 1.5% 8% 1.5% 8%; */
+    
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    
+}
+ 
+.nav1 li a:hover{
+    background-color: #111111;
+}
+
+#slider img{
+    max-width: auto;
+    width: 70%;
+    height: auto;
+    float: left;
+    padding: 0%;
+    padding-top: 0px;
+    margin: auto;
+    border-radius: 4px;
+
+}
+
+#register {
+    float: right;
+    font-weight: bold;   
+    background-color: #9b9bb1c9;
+    width: 30%;
+    /* padding: 1.8%; */
+    text-align: center;
+    border-radius: 3px;
+    height: auto;
+    border-color: black;
+}
+
+#register input{
+    border-color: black ;
+    padding: 3%;
+    border-radius: 10px;
+    margin: 3%;
+    
+}
+
+#register select{
+    border-color: black ;
+    padding: 3%;
+    border-radius: 10px;
+    margin: 3%;
+    margin-right: 8%;
+    width: 50%;
+    padding-left: 10px    
+}
+#span{
+    margin-right: 1%;
+    
+}
+
+.button input {
+    color: #ffffff;
+    background-color: blue;
+    font-weight: bold;
+    font-size: 16px;
+    float: center;
+}
+
+@media screen and (max-width:780px) {
     body {
-      width: auto; /* The width is 100%, when the viewport is 800px or smaller */
+        width: auto; /* The width is 100%, when the viewport is 800px or smaller */
+        background-color: green;
+        /*background-color: #001f3f; */
+    }
+    #slider img{
+        max-width: auto;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+    #register {
+        float: center;
+        font-weight: bold;   
+        background-color: #9b9bb1c9;
+        width: 100%;
+        max-width: auto;
+    /* padding: 1.8%; */
+        text-align: center;
+        height: auto;
+    }
+    #register select{
+        max-width: auto;
+        width: 33%;  
+    }
+    #register input{
+        max-width: auto;
+        width: 33%;        
+    }
+    .button input {
+        max-width: auto;
+        width: 100%;
+        background-color: orange;
+        font-size: 14px;
+    }    
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    body { 
+        line-height: 1.0;
+        background-color: red; 
+    }
+    .button input {
+        max-width: auto;
+        width: 100%;
+        background-color: green;
+        font-size: 14px;
     }
 }
 
-@media only screen and (min-width: 320px)  and (max-width: 480px) and (resolution: 150dpi) {
-    body { 
-        line-height: 1.0; 
-    }
-}
 
 @media screen and (orientation: landscape) {
     body {
@@ -21,61 +180,3 @@
       flex-direction: column;
     }
   }
-body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #001f3f;
-    
-}
-#nav {
-    background: #026292;
-    color: #ffffff;
-    text-align: center;
-    width: auto;
-    padding: 5px;
-}
-#nav h1{
-    text-transform: uppercase;
-    /* font-size:4vw; */
-}
-
-#slider img{
-    float: left;
-    width: 75%;
-    padding: 0%;
-    padding-top: 0px;
-}
-
-#register {
-    float: left;
-    font-weight: bold;   
-    background-color: #ffffff;
-    padding: 3.8%;
-    text-align: center;
-    border-radius: 3px;
-}
-
-input{
-    border-color: black ;
-    padding: 5px;
-    border-radius: 5px;
-}
-.name {
-    padding: 5px;
-    border-radius: 3px;
-}
-
-.email {
-    padding: 5px;
-}
-
-.button {
-    padding: 5px;
-}
-
-#button {
-    color: #ffffff;
-    background-color: #095702;
-    font-weight: bold;
-}
-
-
